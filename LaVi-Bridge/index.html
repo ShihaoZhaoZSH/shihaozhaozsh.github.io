@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Bridging Different Language Models and Generative Vision Models for Text-to-Image Generation">
+  <meta name="keywords" content="Diffusion Model, Text-to-Image Generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bridging Different Language Models and Generative Vision Models for Text-to-Image Generation</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Bridging Different Language Models and Generative Vision Models for Text-to-Image Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://shihaozhaozsh.github.io/">Shihao Zhao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://haoosz.github.io/">Shaozhe Hao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://zibojia.github.io/">Bojia Zi</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=zgaTShsAAAAJ&hl=zh-CN">Huaizhe Xu</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://i.cs.hku.hk/~kykwong/">Kwan-Yee K. Wong</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>The University of Hong Kong,</span>
+			      <span class="author-block"><sup>2</sup>The Chinese University of Hong Kong,</span>
+            <span class="author-block"><sup>3</sup>The Hong Kong University of Science and Technology</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- <span class="link-block">
+                <a href="xxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="xxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Teaser. -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div>
+        <img src="./static/images/overview.png" alt="teaser" class="center">
+      </div>
+      <div text-align:center>
+        <p class="center">
+          LaVi-Bridge is designed for text-to-image diffusion models and serves as a bridge, capable of connecting various pre-trained language models and generative vision models.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+  <!-- <div class="container"> -->
+
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-four-fifths"> -->
+      <div class="column is-full-width">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-to-image generation has made significant advancements with the introduction of text-to-image diffusion models. These models typically consist of a language model that interprets user prompts and a vision model that generates corresponding images. As language and vision models continue to progress in their respective domains, there is a great potential in exploring the replacement of components in text-to-image diffusion models with more advanced counterparts. A broader research objective would therefore be to investigate the integration of any two unrelated language and generative vision models for text-to-image generation. In this paper, we explore this objective and propose LaVi-Bridge, a pipeline that enables the integration of diverse pre-trained language models and generative vision models for text-to-image generation. By leveraging LoRA and adapters, LaVi-Bridge offers a flexible and plug-and-play approach without requiring modifications to the original weights of the language and vision models. Our pipeline is compatible with various language models and generative vision models, accommodating different structures. Within this framework, we demonstrate that incorporating superior modules, such as more advanced language models or generative vision models, results in notable improvements in capabilities like text alignment or image quality. Extensive evaluations have been conducted to verify the effectiveness of LaVi-Bridge.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Pipeline. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <br />
+        <h2 class="title is-3">Pipeline</h2>
+        <div class="content has-text-justified">
+          <p>
+            The language and vision models in the text-to-image diffusion models become closely intertwined after training on a large dataset of text-image pairs. This tight coupling ensures a strong alignment between the provided text description and the generated image, but at the same time also limits the flexibility of the diffusion model. Decoupling the language and vision modules in existing text-to-image diffusion models and replacing a module with a new one becomes nontrivial.
+          </p>
+        </div>
+          <img src="./static/images/pipeline.png" alt="pipeline" style="width:90%; ">
+        <div class="content has-text-justified">
+          <p>
+            To establish a connection between two unrelated language and vision models that have not been previously trained together, LaVi-Bridge keeps the pre-trained language and vision models fixed and utilizes LoRA to introduce trainable parameters into both the language model and the vision model. Furthermore, we introduce an adapter as a bridge between the language model and vision model to facilitate better alignment.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Evaluation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="container is-max-desktop">
+        <br />
+        <h2 class="title is-3">Evaluation</h2>
+
+        <div class="content has-text-justified">
+          <p>
+           We fixed the vision model to the U-Net of Stable Diffusion V1.4 and train LaVi-Bridge with different language models. We considered CLIP text encoder, based on the encoder-only framework, T5 series (T5-Small, T5-Base, T5-Large), based on the encoder-decoder framework, and Llama-2-7B, based on the decoder-only framework. Here are the visualization results:
+          </p>
+        </div>
+        <img src="./static/images/evaluation1.png" alt="evaluation1" style="width:90%; ">
+
+        <div class="content has-text-justified">
+          <p>
+            We conducted the quantitative evaluation on short prompts, long prompts, and compositional prompts for LaVi-Bridge with different language models. The results are shown in the following table. We can observe that Llama-2 achieves the best results for all the metrics used to evaluate text alignment ability. For all the metrics used to evaluate text alignment ability, T5-Large is superior to T5-Base, and T5-Base is superior to T5-Small.
+          </p>
+        </div>
+        <img src="./static/images/table1.png" alt="table1" style="width:90%; ">
+
+        <div class="content has-text-justified">
+          <p>
+           We fixed the language model to T5-Large and integrated it with different generative vision models under LaVi-Bridge. We considered the well-trained U-Nets in the Latent Diffusion Model and Stable Diffusion V1.4, as well as the Vision Transformer in PixArt, totally three models. Here are the visualization results:
+          </p>
+        </div>
+        <img src="./static/images/evaluation2.png" alt="evaluation2" style="width:90%; ">
+
+        <div class="content has-text-justified">
+          <p>
+            We conducted the quantitative evaluation for LaVi-Bridge with different vision models. The results are shown in the following table. We can observe that for all the metrics measuring image quality, LaVi-Bridge with the PixArt vision model achieves the best results. Additionally, the U-Net in Stable Diffusion, an enhanced version of the U-Net in the Latent Diffusion Model, still outperforms Latent Diffusion Model’s U-Net under LaVi-Bridge on all the metrics measuring image quality.
+          </p>
+        </div>
+        <img src="./static/images/table2.png" alt="table2" style="width:90%; ">
+
+      </div>
+    </div>
+    
+
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <br />
+        <h2 class="title is-3">More Visualization Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            Here, we provide more visualization results of LaVi-Bridge with different combinations: CLIP+U-Net(SD), T5-Small+U-Net(SD), T5-Base+U-Net(SD), T5-Large+U-Net(SD), Llama-2+U-Net(SD), T5-Large+U-Net(LDM), T5-Large+Transformer(PixArt):
+          </p>
+        </div>
+        <img src="./static/images/more_vis_results.png" alt="more_vis_results" style="width:90%; ">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>xxx</code></pre>
+  </div>
+</section> -->
+
+
+
+</body>
+</html>
